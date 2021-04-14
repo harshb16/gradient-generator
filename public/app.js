@@ -16,5 +16,4 @@ let angle = Math.floor(Math.random() * 360);
 let gradient = `linear-gradient(${angle}deg, ${colour1}, ${colour2})`;
 gradientBtn.addEventListener('click', applyGradient(gradient));
 
-gradientBtn.style.background = gradient;
 document.onload = applyGradient(gradient);

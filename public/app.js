@@ -13,6 +13,10 @@ const applyGradient = (generatedGradient) => {
 const generateAndApply = () => {
   let colour1 = generateHex();
   let colour2 = generateHex();
+  while (colour1 === colour2) {
+    colour2 = generateHex();
+    console.log('gen');
+  }
   let angle = Math.floor(Math.random() * 360);
   let gradient = `linear-gradient(${angle}deg, ${colour1}, ${colour2})`;
   applyGradient(gradient);

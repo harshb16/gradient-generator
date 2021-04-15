@@ -557,10 +557,6 @@ video {
 	--tw-ring-offset-shadow: 0 0 #0000;
 	--tw-ring-shadow: 0 0 #0000;
 }
-.mx-36 {
-	margin-left: 9rem;
-	margin-right: 9rem;
-}
 .flex {
 	display: flex;
 }
@@ -614,13 +610,13 @@ video {
 .text-center {
 	text-align: center;
 }
-.text-2xl {
-	font-size: 1.5rem;
-	line-height: 2rem;
+.text-sm {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 }
-.text-lg {
-	font-size: 1.125rem;
-	line-height: 1.75rem;
+.text-xs {
+	font-size: 0.75rem;
+	line-height: 1rem;
 }
 .font-semibold {
 	font-weight: 600;
@@ -635,4 +631,21 @@ video {
 }
 .hover\:bg-opacity-50:hover {
 	--tw-bg-opacity: 0.5;
+}
+@media (min-width: 640px) {
+
+	.sm\:mx-36 {
+		margin-left: 9rem;
+		margin-right: 9rem;
+	}
+
+	.sm\:text-2xl {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.sm\:text-lg {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
 }

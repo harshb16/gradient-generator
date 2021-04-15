@@ -1,5 +1,5 @@
-const gradientBtn = document.getElementById('gen-gradient');
-const gradientText = document.getElementById('gradient-text');
+const gradientBtn = document.querySelector('#gen-gradient');
+const gradientText = document.querySelector('#gradient-text');
 
 const generateHex = () => {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -10,10 +10,13 @@ const applyGradient = (generatedGradient) => {
   gradientText.innerHTML = generatedGradient;
 };
 
-let colour1 = generateHex();
-let colour2 = generateHex();
-let angle = Math.floor(Math.random() * 360);
-let gradient = `linear-gradient(${angle}deg, ${colour1}, ${colour2})`;
-gradientBtn.addEventListener('click', applyGradient(gradient));
+const generateAndApply = () => {
+  let colour1 = generateHex();
+  let colour2 = generateHex();
+  let angle = Math.floor(Math.random() * 360);
+  let gradient = `linear-gradient(${angle}deg, ${colour1}, ${colour2})`;
+  applyGradient(gradient);
+};
 
-document.onload = applyGradient(gradient);
+gradientBtn.addEventListener('click', generateAndApply);
+document.onload = generateAndApply();
